@@ -1,6 +1,6 @@
-FROM python:alpine as base
+FROM python:3.8-alpine as base
 
-RUN apk add --no-cache tzdata ffmpeg libmagic libwebp cairo && \
+RUN apk add --no-cache tzdata ffmpeg libmagic libwebp cairo git && \
     cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
     echo "Asia/Shanghai" > /etc/timezone && \
     apk del tzdata && \

@@ -8,8 +8,8 @@ on:
   workflow_dispatch:
 
 env:
-  DH_IMAGE_NAME: thehaukeng/efb-wechat
-  GH_IMAGE_NAME: haukeng/efb-wechat
+  DH_IMAGE_NAME: ninescloud/efb-wechat
+  GH_IMAGE_NAME: ninescloud/efb-wechat
 
 jobs:
   build-and-push-image:

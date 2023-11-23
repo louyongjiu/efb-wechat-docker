@@ -4,3 +4,4 @@ slave_channels:
 middlewares:
 - patch.PatchMiddleware
 - catbaron.search_msg
+- catbaron.search_msg
