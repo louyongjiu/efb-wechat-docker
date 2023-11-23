@@ -5,4 +5,3 @@ python-telegram-bot[socks]
 git+https://github.com/ehForwarderBot/efb-wechat-slave#egg=efb-wechat-slave
 git+https://github.com/ehForwarderBot/efb-patch-middleware#egg=efb-patch-middleware
 git+https://github.com/ehForwarderBot/efb-search_msg-middleware#egg=efb-search_msg-middleware
-git+https://github.com/zhangzhishan/efb-filter-middleware#egg=efb-filter-middleware
