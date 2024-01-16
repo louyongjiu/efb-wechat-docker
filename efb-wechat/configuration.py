@@ -57,6 +57,8 @@ def get_etm_config():
         "animated_stickers": True,
         "message_muted_on_slave": "normal",
         "your_message_on_slave": "silent",
+        "api_base_url": "https://api.telegram.org/bot",
+        "api_base_file_url": "https://api.telegram.org/file/bot",
     }
 
     bot_token = getenv("BOT_TOKEN", "")
@@ -69,6 +71,8 @@ def get_etm_config():
     animated_stickers = getenv("ANIMATED_STICKERS", "")
     message_muted_on_slave = getenv("MESSAGE_MUTED_ON_SLAVE", "")
     your_message_on_slave = getenv("YOUR_MESSAGE_ON_SLAVE", "")
+    api_base_url = getenv("API_BASE_URL", "")
+    api_base_file_url = getenv("API_BASE_FILE_URL", "")
 
     if config_validator(bot_token, "BOT_TOKEN"):
         etm_config["token"] = bot_token
@@ -167,6 +171,13 @@ def get_etm_config():
 
     if config_validator(your_message_on_slave, "MESSAGE_NOTICE"):
         etm_config_flags["your_message_on_slave"] = your_message_on_slave.lower()
+
+    if config_validator(api_base_url, "OTHER"):
+        etm_config_flags["api_base_url"] = api_base_url
+
+    if config_validator(api_base_file_url, "OTHER"):
+        etm_config_flags["api_base_file_url"] = api_base_file_url
+
 
     etm_config["flags"] = etm_config_flags
     return etm_config
